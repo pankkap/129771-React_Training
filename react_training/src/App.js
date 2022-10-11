@@ -1,25 +1,21 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import LifeCycle from "./Components/Hooks/LifeCycle";
+import PassStateAsProps from "./Components/Hooks/PassStateAsProps";
+import StateInClass from "./Components/Hooks/StateInClass";
+import UseEffectDemo from "./Components/Hooks/UseEffectDemo";
+import UseStateDemo from "./Components/Hooks/UseStateDemo";
+import UseStatewithObj from "./Components/Hooks/UseStatewithObj";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://beta-labs.in"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Beta-Labs
-        </a>
-      </header>
+    <div className="container">
+      {/* <UseStateDemo /> */}
+      {/* <UseStatewithObj /> */}
+      {/* <PassStateAsProps /> */}
+      {/* <StateInClass /> */}
+      {/* <LifeCycle /> */}
+      <UseEffectDemo />
     </div>
   );
 }
-
-export default App;
