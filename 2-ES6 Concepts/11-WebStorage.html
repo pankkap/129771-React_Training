@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Web Storage Concepts</h1>
+    <label for="">Enter Name</label>
+    <input type="text" id="data" />
+    <br /><br />
+    <label for="">Enter Email</label>
+    <input type="text" id="email" />
+    <button>Store Data</button>
+    <button>Remove Data</button>
+
+    <br /><br />
+    <a href="./11-DisplayData.html">Get Data</a>
+
+    <script>
+      input = document.getElementById("data");
+      input1 = document.getElementById("email");
+      btn = document.querySelector("button");
+      removebtn = document.querySelectorAll("button")[1];
+      btn.onclick = () => {
+        // let data = input.value;
+        console.log("btn clicked");
+        console.log(input.value);
+        console.log(input1.value);
+
+        let data = {
+          name: input.value,
+          email: input1.value,
+        };
+
+        sessionStorage.setItem("info", JSON.stringify(data));
+      };
+
+      removebtn.onclick = () => {
+        sessionStorage.removeItem("info");
+      };
+    </script>
+  </body>
+</html>
