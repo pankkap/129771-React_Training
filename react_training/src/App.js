@@ -2,6 +2,7 @@ import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import LifeCycle from "./Components/Hooks/LifeCycle";
 import PassStateAsProps from "./Components/Hooks/PassStateAsProps";
+import Posts from "./Components/Hooks/Posts";
 import StateInClass from "./Components/Hooks/StateInClass";
 import UseEffectDemo from "./Components/Hooks/UseEffectDemo";
 import UseStateDemo from "./Components/Hooks/UseStateDemo";
@@ -15,7 +16,8 @@ export default function App() {
       {/* <PassStateAsProps /> */}
       {/* <StateInClass /> */}
       {/* <LifeCycle /> */}
-      <UseEffectDemo />
+      {/* <UseEffectDemo /> */}
+      <Posts/>
     </div>
   );
 }
