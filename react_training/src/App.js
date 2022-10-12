@@ -11,6 +11,7 @@ import UseRefDemo1 from "./Components/Hooks/UseRefDemo-1";
 import UseRefDemo2 from "./Components/Hooks/UseRefDemo2";
 import UseStateDemo from "./Components/Hooks/UseStateDemo";
 import UseStatewithObj from "./Components/Hooks/UseStatewithObj";
+import Todo from "./Components/Todo";
 
 export default function App() {
   return (
@@ -24,9 +25,10 @@ export default function App() {
       {/* <Posts/> */}
       {/* <UseRefDemo1 /> */}
       {/* <UseRefDemo2 /> */}
-      <ClickCounter data="Hello"/>
+      {/* <ClickCounter data="Hello"/>
       <hr />
-      <HoverCounter />
+      <HoverCounter /> */}
+      <Todo />
     </div>
   );
 }
