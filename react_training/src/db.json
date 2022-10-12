@@ -1,3 +1,24 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "id": 1,
+      "title": "pankaj",
+      "body": "new post"
+    },
+    {
+      "id": 2,
+      "title": "new title",
+      "body": "new body"
+    },
+    {
+      "id": 3,
+      "title": "React Training",
+      "body": "It is on Day-3"
+    },
+    {
+      "id": 4,
+      "title": "mnb",
+      "body": "nmbnm"
+    }
+  ]
 }

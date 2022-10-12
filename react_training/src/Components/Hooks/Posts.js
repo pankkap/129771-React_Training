@@ -5,6 +5,7 @@ export default function Posts() {
   const [posts, setposts] = useState();
   const [post, setpost] = useState();
   const [showEditForm, setshowEditForm] = useState(false);
+  const [showCreateForm, setshowCreateForm] = useState(false);
   const [newPostRecord, setnewPostRecord] = useState({
     id: "",
     title: "",
@@ -40,8 +41,56 @@ export default function Posts() {
       .catch((err) => console.log(err.message));
   }
 
+  function OpenNewRecordForm() {
+    setshowCreateForm(true);
+  }
+
+  function createRecord() {
+    axios.post(`http://localhost:3003/posts/`, newPostRecord).then((res) => {
+      alert("Post Created Successfully");
+      setshowCreateForm(false);
+    });
+  }
+
   return (
     <div className="container mt-5">
+      <h3 className="text-center bg-warning">
+        JSON SERVER API with AXIOS Library
+      </h3>
+      <div className="text-center">
+        <button className="btn btn-info m-3" onClick={OpenNewRecordForm}>
+          Add New Record
+        </button>
+      </div>
+
+      {showCreateForm ? (
+        <form>
+          <label htmlFor="">TITLE</label>
+          <input
+            type="text"
+            className="form-control"
+            onChange={(e) =>
+              setnewPostRecord({ ...newPostRecord, title: e.target.value })
+            }
+          />
+          <label htmlFor="">BODY</label>
+          <input
+            type="text"
+            className="form-control"
+            onChange={(e) =>
+              setnewPostRecord({ ...newPostRecord, body: e.target.value })
+            }
+          />
+          <button
+            type="button"
+            className="btn btn-primary m-3"
+            onClick={createRecord}
+          >
+            Add Data
+          </button>
+        </form>
+      ) : null}
+
       {showEditForm ? (
         <form>
           <label htmlFor="">ID</label>
