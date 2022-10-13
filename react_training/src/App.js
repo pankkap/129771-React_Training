@@ -18,6 +18,11 @@ import store from "./Components/Redux/store";
 import CakeStore_1 from "./Components/Redux/CakeStore_1";
 import CakeStore_2 from "./Components/Redux/CakeStore_2";
 import UserComponent from "./Components/Redux/userComponent";
+import WithoutContext from "./Components/Hooks/contextAPI/WithoutContext";
+import WithContextApi from "./Components/Hooks/contextAPI/WithContextApi";
+import UseReducerDemo from "./Components/Hooks/UseReducerDemo";
+import UseMemoDemo from "./Components/Hooks/UseMemoDemo";
+import UseCallbackDemo from "./Components/Hooks/UseCallbackDemo";
 
 export default function App() {
   return (
@@ -36,13 +41,18 @@ export default function App() {
       <HoverCounter /> */}
       {/* <Todo /> */}
 
-      <Provider store={store}>
-        {/* components */}
-        {/* <CakeStore_1 />
+      {/* <Provider store={store}> */}
+      {/* components */}
+      {/* <CakeStore_1 />
         <hr />
         <CakeStore_2 /> */}
-        <UserComponent />
-      </Provider>
+      {/* <UserComponent />
+      </Provider> */}
+      {/* <WithoutContext /> */}
+      {/* <WithContextApi /> */}
+      {/* <UseReducerDemo /> */}
+      {/* <UseMemoDemo /> */}
+      <UseCallbackDemo />
     </div>
   );
 }
