@@ -13,6 +13,12 @@ import UseStateDemo from "./Components/Hooks/UseStateDemo";
 import UseStatewithObj from "./Components/Hooks/UseStatewithObj";
 import Todo from "./Components/Todo";
 
+import { Provider } from "react-redux";
+import store from "./Components/Redux/store";
+import CakeStore_1 from "./Components/Redux/CakeStore_1";
+import CakeStore_2 from "./Components/Redux/CakeStore_2";
+import UserComponent from "./Components/Redux/userComponent";
+
 export default function App() {
   return (
     <div className="container">
@@ -28,7 +34,15 @@ export default function App() {
       {/* <ClickCounter data="Hello"/>
       <hr />
       <HoverCounter /> */}
-      <Todo />
+      {/* <Todo /> */}
+
+      <Provider store={store}>
+        {/* components */}
+        {/* <CakeStore_1 />
+        <hr />
+        <CakeStore_2 /> */}
+        <UserComponent />
+      </Provider>
     </div>
   );
 }
