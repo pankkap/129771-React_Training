@@ -21,7 +21,7 @@ export default function Latest() {
     post.latest = false;
     post.oldest = true;
     post.likes = true;
-    axios.put(`http://127.0.0.1:3003/posts/${post.id}`, post).then(() => {
+    axios.put(`https://my-json-server.typicode.com/pankkap/myDBServer/posts/${post.id}`, post).then(() => {
       getPost();
     });
   }
@@ -31,7 +31,7 @@ export default function Latest() {
     post.oldest = true;
     post.dislikes = true;
 
-    axios.put(`http://127.0.0.1:3003/posts/${post.id}`, post).then(() => {
+    axios.put(`https://my-json-server.typicode.com/pankkap/myDBServer/posts/${post.id}`, post).then(() => {
       getPost();
     });
   }

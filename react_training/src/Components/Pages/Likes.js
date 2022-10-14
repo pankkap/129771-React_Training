@@ -4,13 +4,15 @@ import React, { useEffect, useState } from "react";
 export default function Likes() {
   const [posts, setposts] = useState();
   useEffect(() => {
-    axios.get("http://127.0.0.1:3003/posts").then((res) => {
-      let PostData = res.data;
-      PostData = PostData.filter(
-        (post) => post.likes == true && post.dislikes == false
-      );
-      setposts(PostData);
-    });
+    axios
+      .get("https://my-json-server.typicode.com/pankkap/myDBServer/posts")
+      .then((res) => {
+        let PostData = res.data;
+        PostData = PostData.filter(
+          (post) => post.likes == true && post.dislikes == false
+        );
+        setposts(PostData);
+      });
   }, []);
   return (
     <div>

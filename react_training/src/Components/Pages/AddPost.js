@@ -13,11 +13,15 @@ export default function AddPost() {
     dislikes: false,
   });
   function createRecord() {
-    axios.post(`http://localhost:3003/posts/`, newPostRecord).then((res) => {
-      alert("Post Created Successfully");
-      navigate("/posts/latest");
-      
-    });
+    axios
+      .post(
+        `https://my-json-server.typicode.com/pankkap/myDBServer/posts`,
+        newPostRecord
+      )
+      .then((res) => {
+        alert("Post Created Successfully");
+        navigate("/posts/latest");
+      });
   }
   return (
     <div>

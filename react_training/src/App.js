@@ -13,7 +13,7 @@ import UseRefDemo1 from "./Components/Hooks/UseRefDemo-1";
 import UseRefDemo2 from "./Components/Hooks/UseRefDemo2";
 import UseStateDemo from "./Components/Hooks/UseStateDemo";
 import UseStatewithObj from "./Components/Hooks/UseStatewithObj";
-import Todo from "./Components/Todo";
+// import Todo from "./Components/Todo";
 
 import { Provider } from "react-redux";
 import store from "./Components/Redux/store";
@@ -33,7 +33,16 @@ import Footer from "./Components/Pages/Footer";
 import PostDetails from "./Components/PostDetails";
 import AllPosts from "./Components/Pages/AllPosts";
 import AddPost from "./Components/Pages/AddPost";
+import Login from "./Components/Pages/Login";
+import Register from "./Components/Pages/Register";
 
+import Todo from "./Components/TestingComponents/Todo";
+import Counter from "./Components/TestingComponents/Counter";
+
+const todos = [
+  { id: 1, title: "Buy Coffee", complete: false },
+  { id: 2, title: "Buy Icecreame", complete: true },
+];
 export default function App() {
   return (
     <div className="container">
@@ -64,7 +73,7 @@ export default function App() {
       {/* <UseMemoDemo /> */}
       {/* <UseCallbackDemo /> */}
 
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Provider store={store}>
           <Menu />
           <Routes>
@@ -75,11 +84,18 @@ export default function App() {
             <Route path="/allposts/:id" element={<PostDetails />} />
             <Route path="/posts/*" element={<Posts />} />
             <Route path="/addpost" element={<AddPost />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
           {/* <Footer /> */}
-        </Provider>
-      </BrowserRouter>
+      {/* </Provider> */}
+      {/* </BrowserRouter> */}
+
+      {/* {todos.map((todo) => (
+        <Todo todo={todo} />
+      ))} */}
+      <Counter/>
     </div>
   );
 }

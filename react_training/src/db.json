@@ -99,20 +99,68 @@
     {
       "title": "df",
       "body": "sd",
-      "latest": true,
-      "oldest": false,
-      "likes": false,
+      "latest": false,
+      "oldest": true,
+      "likes": true,
       "dislikes": false,
       "id": 11
     },
     {
       "title": "df",
       "body": "sd",
-      "latest": true,
-      "oldest": false,
-      "likes": false,
+      "latest": false,
+      "oldest": true,
+      "likes": true,
       "dislikes": false,
       "id": 12
+    },
+    {
+      "title": "new title in conditional routing",
+      "body": "new title in conditional routing",
+      "latest": false,
+      "oldest": true,
+      "likes": false,
+      "dislikes": true,
+      "id": 13
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@abc.com",
+      "password": "admin",
+      "name": "admin",
+      "role": "Author"
+    },
+    {
+      "id": 2,
+      "email": "guest@abc.com",
+      "password": "guest",
+      "name": "guest",
+      "role": "Visitor"
+    },
+    {
+      "email": "",
+      "password": "Pankaj",
+      "name": "Pankaj Kapoor",
+      "role": "Visitor",
+      "username": "pankaj@abc.com",
+      "id": 3
+    },
+    {
+      "email": "",
+      "password": "rachit",
+      "name": "Rachit",
+      "role": "Visitor",
+      "username": "rachit@abc.com",
+      "id": 4
+    },
+    {
+      "email": "tanish@abc.com",
+      "password": "tanish",
+      "name": "Tanish Sharma",
+      "role": "Visitor",
+      "id": 5
     }
   ]
 }
