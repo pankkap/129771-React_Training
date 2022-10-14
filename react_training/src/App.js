@@ -1,10 +1,12 @@
 import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
 import ClickCounter from "./Components/Hooks/ClickCounter";
 import HoverCounter from "./Components/Hooks/HoverCounter";
 import LifeCycle from "./Components/Hooks/LifeCycle";
 import PassStateAsProps from "./Components/Hooks/PassStateAsProps";
-import Posts from "./Components/Hooks/Posts";
+// import Posts from "./Components/Hooks/Posts";
+import Posts from "./Components/Pages/Posts";
 import StateInClass from "./Components/Hooks/StateInClass";
 import UseEffectDemo from "./Components/Hooks/UseEffectDemo";
 import UseRefDemo1 from "./Components/Hooks/UseRefDemo-1";
@@ -23,6 +25,12 @@ import WithContextApi from "./Components/Hooks/contextAPI/WithContextApi";
 import UseReducerDemo from "./Components/Hooks/UseReducerDemo";
 import UseMemoDemo from "./Components/Hooks/UseMemoDemo";
 import UseCallbackDemo from "./Components/Hooks/UseCallbackDemo";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Menu from "./Components/Pages/Menu";
+import Home from "./Components/Pages/Home";
+import PageNotFound from "./Components/Pages/PageNotFound";
+import Footer from "./Components/Pages/Footer";
+import PostDetails from "./Components/PostDetails";
 
 export default function App() {
   return (
@@ -52,7 +60,22 @@ export default function App() {
       {/* <WithContextApi /> */}
       {/* <UseReducerDemo /> */}
       {/* <UseMemoDemo /> */}
-      <UseCallbackDemo />
+      {/* <UseCallbackDemo /> */}
+
+      <BrowserRouter>
+        <Provider store={store}>
+          <Menu />
+          <Routes>
+            <Route path="/" element={<Navigate to="/home" />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/posts" element={<Posts />} />
+            <Route path="/posts/:id" element={<PostDetails />} />
+
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+          {/* <Footer /> */}
+        </Provider>
+      </BrowserRouter>
     </div>
   );
 }
