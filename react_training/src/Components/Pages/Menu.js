@@ -36,6 +36,16 @@ export default function Menu() {
                   Posts
                 </Link>
               </li>
+              <li class="nav-item">
+                <Link class="nav-link text-white" to="/allposts">
+                  All Posts
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link class="nav-link text-white" to="/addpost">
+                  Add Post
+                </Link>
+              </li>
               {/* <li class="nav-item">
                 <Link class="nav-link text-white" to="/comp1">
                   Comp-1

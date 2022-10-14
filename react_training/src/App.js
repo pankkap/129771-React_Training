@@ -31,6 +31,8 @@ import Home from "./Components/Pages/Home";
 import PageNotFound from "./Components/Pages/PageNotFound";
 import Footer from "./Components/Pages/Footer";
 import PostDetails from "./Components/PostDetails";
+import AllPosts from "./Components/Pages/AllPosts";
+import AddPost from "./Components/Pages/AddPost";
 
 export default function App() {
   return (
@@ -68,9 +70,11 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Navigate to="/home" />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/posts" element={<Posts />} />
-            <Route path="/posts/:id" element={<PostDetails />} />
-
+            <Route path="/posts" element={<Navigate to="/posts/latest" />} />
+            <Route path="/allposts" element={<AllPosts />} />
+            <Route path="/allposts/:id" element={<PostDetails />} />
+            <Route path="/posts/*" element={<Posts />} />
+            <Route path="/addpost" element={<AddPost />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
           {/* <Footer /> */}
